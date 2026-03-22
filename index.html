@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, sans-serif;
+            background: linear-gradient(135deg, #e9eff5, #dce6f2);
+            color: #1f2937;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #111827;
+            padding: 16px;
+            text-align: center;
+        }
+
+        header a {
+            color: #9ca3af;
+            margin: 0 12px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        header a:hover {
+            color: #fff;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 420px;
+            background: #ffffff;
+            padding: 28px;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .title h1 {
+            font-size: 22px;
+            margin-bottom: 6px;
+        }
+
+        .title p {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        #inputs input {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 10px;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+
+        #inputs input:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+            outline: none;
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+
+        #add-mark {
+            background: #22c55e;
+            color: white;
+        }
+
+        #add-mark:hover {
+            background: #16a34a;
+        }
+
+        #delete-mark {
+            background: #ef4444;
+            color: white;
+        }
+
+        #delete-mark:hover {
+            background: #dc2626;
+        }
+
+        #calculate {
+            background: #3b82f6;
+            color: white;
+        }
+
+        #calculate:hover {
+            background: #2563eb;
+        }
+
+        button:active {
+            transform: scale(0.97);
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 14px;
+            background: #f8fafc;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 16px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .avg {
+            color: #3b82f6;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 13px;
+            color: #6b7280;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="#">Home</a>
+        <a href="#">Calculator</a>
+        <a href="#">About</a>
+    </header>
+
+    <main>
+        <div class="card">
+
+            <div class="title">
+                <h1>Grade Calculator</h1>
+                <p>Enter your marks to calculate average</p>
+            </div>
+
+            <form id="grade-form">
+
+                <div id="inputs">
+                    <input type="number" class="mark" placeholder="Subject 1" min="0" max="100">
+                    <input type="number" class="mark" placeholder="Subject 2" min="0" max="100">
+                    <input type="number" class="mark" placeholder="Subject 3" min="0" max="100">
+                </div>
+
+                <div class="actions">
+                    <button type="button" id="add-mark">Add</button>
+                    <button type="button" id="delete-mark">Delete</button>
+                    <button type="submit" id="calculate">Calculate</button>
+                </div>
+
+            </form>
+
+            <div class="result">
+                Average: <span class="avg">--</span>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Abdallah Thyab</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
