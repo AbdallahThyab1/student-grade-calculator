@@ -50,7 +50,6 @@ A simple web application that allows users to:
 
 student-grade-calculator/
 ├── index.html
-├── style.css
 ├── script.js
 └── README.md
 
